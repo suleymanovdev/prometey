@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A place for your posts, files, codes and more from IT.">
+    <meta name="author" content="sud3v">
+    <link rel="icon" href="../assets/images/prometey.png">
+    <title>Create New Group | Prometey</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="../assets/css/create-new-group/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h3>Create New Group</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-container">
+                    <form id="create-group-form">                        
+                        <div class="form-group">
+                            <label for="group-logo">Upload Image</label>
+                            <input type="file" class="form-control-file" id="group-logo">
+                        </div>
+                        <div class="form-group">
+                            <label for="group-name">Name</label>
+                            <input type="text" class="form-control" id="group-name" placeholder="Enter group name">
+                        </div>
+                        <div class="form-group">
+                            <label for="group-domain">Domain</label>
+                            <input type="text" class="form-control" id="group-domain" placeholder="Enter group domain (https://theprometey.xyz/group/DOMAIN)">
+                        </div>
+                        <div class="form-group">
+                            <label for="group-content">Description</label>
+                            <textarea class="form-control" id="group-description" rows="1" placeholder="Enter group description"></textarea>
+                        </div>
+                        <button id="submit-button" type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    <div class="preview-container">
+                        <h5>Image Preview</h5><br>
+                        <img id="preview" src="" alt="Image preview">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/create-new-group/main.js"></script>
+</body>
+</html>

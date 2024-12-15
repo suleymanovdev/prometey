@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\CommentServices\**" />
+    <EmbeddedResource Remove="Services\CommentServices\**" />
+    <None Remove="Services\CommentServices\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="8.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="8.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.5" />
+    <PackageReference Include="Npgsql" Version="8.0.3" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />
+    <PackageReference Include="Serilog" Version="3.1.1" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.5" />
+  </ItemGroup>
+	
+  <ItemGroup>
+	<ProjectReference Include="..\prometeyapi.Core\prometeyapi.Core.csproj" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Authorization">
+      <HintPath>..\..\..\..\..\..\home\elvin-suleymanov\.dotnet\packs\Microsoft.AspNetCore.App.Ref\8.0.5\ref\net8.0\Microsoft.AspNetCore.Authorization.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

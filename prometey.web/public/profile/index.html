@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A place for your posts, files, codes and more from IT.">
+    <meta name="author" content="sud3v">
+    <link rel="icon" href="/assets/images/prometey.png">
+    <title>Profile | Prometey</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="/assets/css/profile/main.css" rel="stylesheet">
+</head>
+<body>
+    <br>
+    <div class="container">
+        <div class="main-body">
+            <header class="blog-header py-3">
+                <div class="row flex-nowrap justify-content-between align-items-center">
+                    <div class="col-4 pt-1">
+                        <a href="/" type="button" class="btn btn-outline-primary btn-sm">Home</a>
+                    </div>
+                    <div class="col-4 text-center">
+                        <img src="/assets/images/prometey.png" alt="Prometey" style="width: 100px; height: 100px; border-radius: 100px; margin-top: 10px; margin-bottom: 10px; margin-left: 10px; margin-right: 10px;">
+                    </div>
+                    <div class="col-4 pt-2">
+                    </div>
+                </div>
+            </header>
+            <br>
+            <div class="row gutters-sm">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 d-flex flex-column align-items-center bg-light rounded">
+                            <div class="mb-3">
+                                <div class="text-center">
+                                    <br><br>
+                                    <img id="photo" src="/assets/images/prometey.png" alt="Profile Photo" class="rounded-circle" width="200px" height="200px">
+                                    <div class="mt-3">
+                                        <a class="btn btn-info" href="#" onclick="showEditProfileModal()">Edit</a>
+                                    </div>
+                                    <div class="mt-3">
+                                        <a class="btn btn-danger" href="#" onclick="deleteProfile()">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Name</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            <p id="name">Loading...</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Surname</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            <p id="surname">Loading...</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Email</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            <p id="email">Loading...</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Username</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            <p id="username">Loading...</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Category</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            <p id="category">Loading...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-md-3 d-flex flex-column align-items-center bg-light rounded">
+                            <div id="groups-section" class="text-center">
+                                <br><br>
+                                <h4 class="font-italic">Groups</h4>
+                                <ol id="user-groups" class="list-unstyled mb-0">
+                                </ol>
+                                <br>
+                                <p>Right now on Development.</p>
+                                <!-- <a href="/create-new-group" class="btn btn-outline-primary">New</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <h2 class="pb-3 mb-4 font-italic border-bottom">Applications <a href="/upload-new-application">Add New Application</a></h2>
+            <div id="applications"></div>
+            <nav class="blog-pagination" id="applications-pagination" style="display: flex; justify-content: center;">
+                <a class="btn btn-outline-secondary" id="prev-applications" href="#">Previous</a>
+                &nbsp;
+                <a class="btn btn-outline-primary" id="next-applications" href="#">Next</a>
+            </nav>
+            <h2 class="pb-3 mb-4 font-italic border-bottom">Posts <a href="/create-new-post">Add New Post</a></h2>
+            <div id="posts"></div>
+            <nav class="blog-pagination" id="posts-pagination" style="display: flex; justify-content: center;">
+                <a class="btn btn-outline-secondary" id="prev-posts" href="#">Previous</a>
+                &nbsp;
+                <a class="btn btn-outline-primary" id="next-posts" href="#">Next</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editProfileForm">
+                        <div class="form-group">
+                            <label for="editName">Name</label>
+                            <input type="text" class="form-control" id="editName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editSurname">Surname</label>
+                            <input type="text" class="form-control" id="editSurname" name="surname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editEmail">Email</label>
+                            <input type="email" class="form-control" id="editEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editUsername">Username</label>
+                            <input type="text" class="form-control" id="editUsername" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editCategory">Category</label>
+                            <select class="form-control" id="editCategory" name="category">
+                                <option value="1">Back-end Development</option>
+                                <option value="2">Front-end Development</option>
+                                <option value="3">Data Science</option>
+                                <option value="4">DevOps</option>
+                                <option value="5">Cybersecurity</option>
+                                <option value="6">Design</option>
+                                <option value="7">User</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="editProfilePhoto">Profile Photo</label>
+                            <input type="file" class="form-control" id="editProfilePhoto" name="profilePhoto" accept="image/*">
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submitButton">Save changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteUser" tabindex="-1" role="dialog" aria-labelledby="deleteUser" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Delete Account</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="deleteUserForm">
+                        <button type="submit" class="btn btn-primary" id="submitButton">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../assets/js/profile/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A place for your posts, files, codes and more from IT.">
+    <meta name="author" content="sud3v">
+    <link rel="icon" href="../assets/images/prometey.png">
+    <title>Upload New Application | Prometey</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="../assets/css/upload-new-application/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h3>Upload New Application</h3>
+                <p>Your request to add new application will be sent to administrators for verification!</p>
+            </div>
+            <div class="card-body">
+                <div class="form-container">
+                    <form id="upload-application-form">
+                        <div class="form-group">
+                            <label for="application-image">Upload Image</label>
+                            <input type="file" class="form-control-file" id="application-image">
+                        </div>
+                        <div class="form-group">
+                            <label for="application-zip">Upload Application</label>
+                            <p class="font-italic">Careful! The Application must be archived to .zip!</p>
+                            <p class="font-italic">The archive must contain the application files and a README.md file!</p>
+                            <p class="font-italic">ZIP size max is 2 gb.</p>
+                            <input type="file" class="form-control-file" id="application-zip">
+                        </div>
+                        <div class="form-group">
+                            <label for="application-name">Name</label>
+                            <input type="text" class="form-control" id="application-name" placeholder="Enter application name">
+                        </div>
+                        <div class="form-group">
+                            <label for="application-description">Description</label>
+                            <textarea class="form-control" id="application-description" rows="5" placeholder="Add application information"></textarea>
+                        </div>
+                        <select class="form-control" id="application-category">
+                            <option value="0">- Category -</option>
+                            <option value="7">User</option>
+                            <option value="1">Back-end Development</option>
+                            <option value="2">Front-end Development</option>
+                            <option value="3">DataScience</option>
+                            <option value="4">DevOps</option>
+                            <option value="5">Cybersecurity</option>
+                            <option value="6">Design</option>
+                        </select><br>
+                        <button id="submit-button" type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    <div class="preview-container">
+                        <h5>Image Preview</h5><br>
+                        <img id="preview" src="" alt="Image preview">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/upload-new-application/tinymce/tinymce.min.js"></script>
+    <script src="../assets/js/upload-new-application/main.js"></script>
+</body>
+</html>

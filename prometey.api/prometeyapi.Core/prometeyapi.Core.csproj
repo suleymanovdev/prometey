@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DTOs\CommentDTOs\**" />
+    <Compile Remove="DTOs\GeneralDTOs\Request\**" />
+    <Compile Remove="Models\Groups\**" />
+    <Compile Remove="Models\Repositories\**" />
+    <EmbeddedResource Remove="DTOs\CommentDTOs\**" />
+    <EmbeddedResource Remove="DTOs\GeneralDTOs\Request\**" />
+    <EmbeddedResource Remove="Models\Groups\**" />
+    <EmbeddedResource Remove="Models\Repositories\**" />
+    <None Remove="DTOs\CommentDTOs\**" />
+    <None Remove="DTOs\GeneralDTOs\Request\**" />
+    <None Remove="Models\Groups\**" />
+    <None Remove="Models\Repositories\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Models\trlc5vse.3zu~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.9.1" />
+    <PackageReference Include="Google.Cloud.Storage.V1" Version="4.10.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTOs\GroupDTOs\Application\Request\" />
+    <Folder Include="DTOs\GroupDTOs\Post\Request\" />
+  </ItemGroup>
+
+</Project>

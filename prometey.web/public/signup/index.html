@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A place for your posts, files, codes and more from IT.">
+    <meta name="author" content="sud3v">
+    <link rel="icon" href="../assets/images/prometey.png">
+    <title>Sign Up | Prometey</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="../assets/css/signup/main.css" rel="stylesheet">
+</head>
+<body class="text-center">
+    <form class="form-signup" id="signup-form">
+        <img class="mb-4" src="../assets/images/prometey.png" alt="" width="172" height="172">
+        <h1 class="h3 mb-3 font-weight-normal">Sign Up</h1>
+        <input class="form-control" type="file" id="formFile" required />
+        <input class="form-control" type="text" name="signup-name" id="signup-name" value="" placeholder="Name" required />
+        <input class="form-control" type="text" name="signup-surname" id="signup-surname" value="" placeholder="Surname" required />
+        <input class="form-control" type="text" name="signup-username" id="signup-username" value="" placeholder="Username" required />
+        <input class="form-control" type="email" name="signup-email" id="signup-email" value="" placeholder="Email" autofocus="" required />
+        <input class="form-control" type="password" name="signup-password" id="signup-password" value="" placeholder="Password" required />
+        <input class="form-control" type="password" name="signup-password-repeat" id="signup-password-repeat" value="" placeholder="Confirm Password" required />
+        <select class="form-control" name="signup-category" id="signup-category" required >
+            <option value="0">- Category -</option>
+            <option value="7">User</option>
+            <option value="1">Back-end Development</option>
+            <option value="2">Front-end Development</option>
+            <option value="3">DataScience</option>
+            <option value="4">DevOps</option>
+            <option value="5">Cybersecurity</option>
+            <option value="6">Design</option>
+        </select>
+        <div id="process">
+            <br><button id="submit-button" class="btn btn-lg btn-primary btn-block" type="submit">Proceed</button>
+        </div>
+        <br><a href="/login/" type="button" class="btn btn-lg btn-outline-primary btn-block">Log In</a>
+        <br><a href="/">Main Page</a>
+        <p class="mt-5 mb-3 text-muted">© Prometey 2024</p>
+    </form>
+    <script src="../assets/js/signup/main.js"></script>
+</body>
+</html>
