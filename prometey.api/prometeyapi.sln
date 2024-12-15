@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "prometeyapi.Core", "promete
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "prometeyapi.Infrastructure", "prometeyapi.Infrastructure\prometeyapi.Infrastructure.csproj", "{98FB1CF4-BD9D-4D32-932B-983409443784}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "prometeyapi.Tests", "prometeyapi.Tests\prometeyapi.Tests.csproj", "{7B0E9856-87F9-4A96-BD0C-5384605D6CD0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{98FB1CF4-BD9D-4D32-932B-983409443784}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98FB1CF4-BD9D-4D32-932B-983409443784}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98FB1CF4-BD9D-4D32-932B-983409443784}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B0E9856-87F9-4A96-BD0C-5384605D6CD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B0E9856-87F9-4A96-BD0C-5384605D6CD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B0E9856-87F9-4A96-BD0C-5384605D6CD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B0E9856-87F9-4A96-BD0C-5384605D6CD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
